@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    border: none !important;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    overflow-y: hidden;
+}
+
+main {
+    background: #fefdf9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 12px;
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    gap: 1rem;
+}
+
+
+.header { 
+    grid-area: 1 / 1 / 2 / 4; 
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    border: 2px dashed blue;
+    width: 100%;
+}
+
+.header .nav .logo {
+    border: 2px solid red;
+}
+
+.header .nav ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    gap: 2.4rem;
+}
+
+.header .nav ul a {
+    text-decoration: none;
+    color: #757475;
+}
+
+.header .nav ul a:hover {
+    color: #f15d51;
+}
+
+.main {
+    grid-area: 2 / 1 / 5 / 3;
+    border: 1px solid blue;
+}
+
+.main .main-bg img {
+    height: 310px;
+}
+
+.main-bg-mobile {
+    display: none;
+}
+
+.main-container {
+    display: flex;
+    /* padding: 12px 0; */
+    height: 200px;
+}
+
+.main-container-text-left, .main-container-text-right {
+    width: 100%;
+    border: 2px dashed red;
+}
+
+.main-container-text-left {
+    border: 2px dashed blue;
+} 
+
+.main-container-text-left p {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 3.2rem;
+    border: 2px dashed red;
+    margin-top: 18px;
+}
+
+.main-container-text-right p {
+    color: #757475;
+    line-height: 1.5rem;
+}
+
+.main-container-text-right-btn button {
+    border: none;
+    padding: 18px 36px;
+    background: #f15d51;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    margin-top: 19px;
+}
+
+.main-container-text-right-btn button:hover {
+    background: #00001a;
+}
+
+.aside { 
+    grid-area: 2 / 4 / 5 / 3; 
+    border: 1px solid green;
+    background: #00001a;
+}
+
+.aside-desc {
+    padding: 0 20px;
+}
+
+.aside-order {
+    color: white;
+}
+
+.aside-order a {
+    font-size: 1.4rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.aside-order a:hover {
+    color: #eea850;
+}
+
+.aside-order p {
+    color: #bdbdbd;
+    line-height: 1.6rem;
+}
+
+.aside-desc hr {
+    background: #757475;
+    border: none;
+    height: 0.01rem;
+}
+
+.aside-desc .aside-header p {
+    color: #eea850;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: pointer;
+}
+
+.footer { 
+    grid-area: 5 / 1 / 6 / 4; 
+    border: 1px solid blue;
+    display: flex;
+    /* gap: 2rem; */
+} 
+
+.footer-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-order .footer-order-text .number {
+    font-size: 28px;
+    border: 2px solid red;
+    margin-bottom: -14px;
+    color: #bdbdbd;
+    font-weight: 700;
+}
+
+.footer-order-text { 
+    border: 2px dashed red;
+}
+
+.footer-order-text a {
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footer-order-text a:hover {
+    color: #f15d51;
+}
+
+.footer-order-text p {
+    color: #7e7e7e;
+}
+
+.footer-order-image {
+    padding-right: 18px;
+}
+
+.footer-order-image img {
+    height: 120px;
+}
+
+@media only screen and (max-width: 1160px) {
+    body, html {
+        overflow-y: auto;
+    }
+
+    .main-bg-mobile {
+        display: block;
+    }
+    
+    .main-bg-desktop {
+        display: none;
+    }
+
+    main {
+        display: block;
+    }
+
+    .main-container {
+        display: grid;
+    }
+
+    .aside {
+        margin-top: 240px;
+        padding: 24px 12px;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .footer {
+        display: block;
+    }
+}
